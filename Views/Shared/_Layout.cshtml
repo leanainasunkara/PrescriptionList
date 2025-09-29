@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Prescription List";
+    Layout = null; 
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body class="d-flex flex-column" style="
+    min-height: 100vh;
+    background-image: url('/image/frame-medicines.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+">
+    <div class="container">
+        <header class="text-center my-4">
+            <img src="/image/Walgreens-Logoo.png" alt="Walgreens Logo" style="height:60px;" />
+            <h1 style="text-align:center; color:red; font-weight:bold;">Walgreens</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main role="main" class="pb-4">
+            @RenderBody()
+        </main>
+
+
+        <footer class="fixed-bottom text-left text-muted mt-5">
+            <p>
+                &copy; @DateTime.Now.Year - PrescriptionList
+                <a href="/Home/Privacy" class="text-primary text-decoration-underline">Privacy</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
