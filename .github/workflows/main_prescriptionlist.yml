@@ -52,4 +52,4 @@ jobs:
           app-name: 'PrescriptionList'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA8F664A965C49AF8E86AADAAFB1A9B5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64370E8F24C1414EAC2123F7D4F5A42A }}
